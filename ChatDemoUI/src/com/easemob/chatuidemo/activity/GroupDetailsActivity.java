@@ -58,6 +58,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
 	String longClickUsername = null;
 
+	private TextView detailGroupId;
 	private ExpandGridView userGridview;
 	private String groupId;
 	private ProgressBar loadingPB;
@@ -93,6 +94,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 		setContentView(R.layout.activity_group_details);
 		instance = this;
 		st = getResources().getString(R.string.people);
+		detailGroupId = (TextView) findViewById(R.id.tv_group_id_second);
 		clearAllHistory = (RelativeLayout) findViewById(R.id.clear_all_history);
 		userGridview = (ExpandGridView) findViewById(R.id.gridview);
 		loadingPB = (ProgressBar) findViewById(R.id.progressBar);
@@ -114,6 +116,8 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
 		// 获取传过来的groupid
 		groupId = getIntent().getStringExtra("groupId");
+		//显示群组ID
+		detailGroupId.setText(groupId);
 		group = EMGroupManager.getInstance().getGroup(groupId);
 
 		if (group.getOwner() == null || "".equals(group.getOwner())

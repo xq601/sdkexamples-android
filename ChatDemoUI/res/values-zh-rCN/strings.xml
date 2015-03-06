@@ -89,6 +89,9 @@
     <string name="Open_group_members_invited">开放群成员邀请</string>
     <string name="Open_group_chat">公开的群聊</string>
     <string name="blacklist">黑名单列表</string>
+    
+    <string name="group_id">group id</string>
+    
     <string name="Empty_the_chat_record">清空聊天记录</string>
     <string name="Shielding_of_the_message">屏蔽群消息</string>
     <string name="The_dissolution_of_chatting">解散群聊</string>
